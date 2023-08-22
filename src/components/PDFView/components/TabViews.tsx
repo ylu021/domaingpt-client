@@ -7,8 +7,6 @@ const TabViews = ({
 { 
     items: string[]
 }) => {
-    console.log(items)
-    const isNew = (index: number) => index === items.length - 1
     return (
         <TabPanels>
             {items.map((item, index) => 
