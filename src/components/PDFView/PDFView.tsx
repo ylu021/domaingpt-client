@@ -16,9 +16,19 @@ const PDFView = ({ items }: { items: string[] }) => {
     const { tabIndex, updateTab } = useContext(selectedTabContext);
     return (
         <Flex minH="100vh" flex={1} background="blue.900">
-            <Tabs flex={1} index={tabIndex} onChange={(index) => updateTab?.(index)} variant="enclosed" sx={ViewpaddingStyles}>
-                <TabList items={items} />
-                <TabViews items={items} />
+            <Tabs 
+                flex={1} 
+                index={tabIndex} 
+                onChange={(index) => updateTab?.(index)} variant="enclosed" sx={ViewpaddingStyles}
+                display="flex"
+                flexDir="column"
+            >
+                <Box maxHeight="5rem">
+                    <TabList items={items} />
+                </Box>
+                <Box flexGrow={12}>
+                    <TabViews items={items} />
+                </Box>
             </Tabs>
             { showPDF && <FileView />}
         </Flex>

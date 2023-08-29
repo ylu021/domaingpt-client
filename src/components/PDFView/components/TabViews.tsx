@@ -8,13 +8,13 @@ const TabViews = ({
     items: string[]
 }) => {
     return (
-        <TabPanels>
+        <TabPanels height="100%">
             {items.map((item, index) => 
                 <TabPanel key={`tabPanel-${index}`}>
                     <TabView item={item} />
                 </TabPanel>
             )}
-            <TabPanel key={`tabPanel-new`}>
+            <TabPanel key={`tabPanel-new`} height="100%">
                 <NewTabView item={'new'} />
             </TabPanel>
         </TabPanels>
