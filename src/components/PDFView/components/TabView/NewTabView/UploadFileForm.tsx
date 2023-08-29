@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react"
+import { Box, Button, Text } from "@chakra-ui/react"
 import { useRef, useState } from "react";
 
 const UploadFileForm = () => {
@@ -74,9 +74,9 @@ const UploadFileForm = () => {
                     >
                         Upload a file
                     </Button>
-                    <p>
-                        Maximum file size 50 MB.
-                    </p>
+                    <Text marginTop="4">
+                        (Maximum file size 10 MB)
+                    </Text>
                 </Box>
             </label>
         </form>
