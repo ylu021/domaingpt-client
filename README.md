@@ -2,12 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create/edit file called `.env.local` and add the secrets in there  
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
-yarn dev
+yarn && yarn dev
 # or
 pnpm dev
 ```
